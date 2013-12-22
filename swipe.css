@@ -37,11 +37,54 @@ a {
   padding-bottom:20px;
 }
 .swipe li div, .swipe div div div {
-  margin:0 10px;
-  padding:50px 10px;
+  position: relative;
+  top: 0px;
+  left: 20px;
+  margin:0 0px;
+  z-index: 1;
+  
+  width:200px;
+  height:200px;
+  line-height:200px;
   background:#1db1ff;
   font-weight:bold;
   color:#fff;
   font-size:20px;
   text-align:center;
+  vertical-align:middle;
+}
+#prev {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin:0 0px;
+  z-index: 2;
+  
+  width:20px;
+  height:200px;
+  line-height:200px;
+  background:#AAAAAA;
+  font-weight:bold;
+  color:#fff;
+  font-size:20px;
+  text-align:center;
+  vertical-align:middle;
+}
+
+#next {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin:0 0px;
+  z-index: 2;
+  
+  width:20px;
+  height:200px;
+  line-height:200px;
+  background:#AAAAAA;
+  font-weight:bold;
+  color:#fff;
+  font-size:20px;
+  text-align:center;
+  vertical-align:middle;
 }

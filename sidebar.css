@@ -1,0 +1,29 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#main-sidebar, #main-container {
+    position: absolute;
+}
+#main-sidebar {
+    top: 30px;
+    width: 100%;
+    bottom: 200px;
+    background:orange;
+}
+#main-container {
+    top: 230px;
+	width: 100%;
+	height: 100%;
+    background:green;
+}
+
+html body .content-container {
+	position:absolute;
+	background:green;
+	top: 30px;
+	width:100%;
+	height:100%;
+	z-index:4;
+}

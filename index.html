@@ -3,76 +3,66 @@
 <head>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/> 
 <link href='style.css' rel='stylesheet'/>
+<link href='swipe.css' rel='stylesheet'/>
+<link href='topbar.css' rel='stylesheet'/>
+<link href='sidebar.css' rel='stylesheet'/>
+
+<script src='swipe.js'></script>
+<script src='toggle.js'></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
 </head>
 <body>
 
-<h1>Swipe</h1>
-
-<h2>150px wide</h2>
-
-<div id='slider' class='swipe' style='width:150px'>
-  <ul>
-    <li style='display:block'><div>1</div></li>
-    <li style='display:none'><div>2</div></li>
-    <li style='display:none'><div>3</div></li>
-    <li style='display:none'><div>4</div></li>
-    <li style='display:none'><div>5</div></li>
-  </ul>
+<div id="main-topbar" class="topbar">
+	<ul id="navigation">
+		<li><a href="index.html">Map</a><li>
+		<li><a href="#" onclick="myToggle()">toggle</a></li>
+		<li><a href="images.html">Images</a><li>
+		<li><a href="#">Tweets</a><li>
+		<li><a href="list.html">Keylisters</a><li>
+		<li><a href="#">About</a><li>
+	</ul>
 </div>
 
-
-<h2>250px wide</h2>
-
-<div id='slider2' class='swipe' style='width:250px'>
-  <ul>
-    <li style='display:block'><div>1</div></li>
-    <li style='display:none'><div>2</div></li>
-    <li style='display:none'><div>3</div></li>
-    <li style='display:none'><div>4</div></li>
-    <li style='display:none'><div>5</div></li>
-  </ul>
+<div id="main-sidebar" class="sidebar"> 
+	<div id='my_slider' class='swipe' style='width:1000px'>
+	  <ul>
+	    <li style='display:block'><div>1</div></li>
+	    <li style='display:none'><div>2</div></li>
+	    <li style='display:none'><div>3</div></li>
+	    <li style='display:none'><div>4</div></li>
+	    <li style='display:none'><div>5</div></li>
+	    <li style='display:none'><div>6</div></li>
+	    <li style='display:none'><div>7</div></li>
+	    <li style='display:none'><div>8</div></li>
+	    <li style='display:none'><div>9</div></li>
+	    <li style='display:none'><div>10</div></li>
+	    <li style='display:none'><div>11</div></li>
+	    <li style='display:none'><div>12</div></li>
+	    <li style='display:none'><div>13</div></li>
+	  </ul>
+	</div>
+	
+	<div id="prev" onclick='my_slider.prev();return false;'></div> 
+	<div id="next" onclick='my_slider.next();return false;'></div>
+	
+	<a href='#' onclick='my_slider.prev();return false;'>prev</a> 
+	<a href='#' onclick='my_slider.next();return false;'>next</a>
+	<br><br>
+	  
 </div>
 
+<div id="main-container" class="content-container">
 
-<h2>Full width</h2>
-
-<div id='slider3' class='swipe'>
-  <ul>
-    <li style='display:block'><div>1</div></li>
-    <li style='display:none'><div>2</div></li>
-    <li style='display:none'><div>3</div></li>
-    <li style='display:none'><div>4</div></li>
-    <li style='display:none'><div>5</div></li>
-  </ul>
 </div>
 
-<a href='#' onclick='slider3.prev();return false;'>prev</a> 
-<a href='#' onclick='slider3.next();return false;'>next</a>
-<br><br>
-
-<h2>Arbitrary Elements</h2>
-
-<div id='slider4' class='swipe'>
-  <div>
-    <div style='display:block'><div>1</div></div>
-    <div style='display:none'><div>2</div></div>
-    <div style='display:none'><div>3</div></div>
-    <div style='display:none'><div>4</div></div>
-    <div style='display:none'><div>5</div></div>
-  </div>
-</div>
-
-<a href='#' onclick='slider4.prev();return false;'>prev</a> 
-<a href='#' onclick='slider4.next();return false;'>next</a>
-<br><br>
-
-
-<script src='swipe.js'></script>
 <script>
-new Swipe(document.getElementById('slider'));
-new Swipe(document.getElementById('slider2'));
-var slider3 = new Swipe(document.getElementById('slider3'));
-var slider4 = new Swipe(document.getElementById('slider4'));
+var my_slider = new Swipe(document.getElementById('my_slider'), {
+	speed: 100,
+	items: 5
+});
 </script>
 
 </body> 
