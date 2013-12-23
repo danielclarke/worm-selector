@@ -9,6 +9,7 @@
 
 <script src='swipe.js'></script>
 <script src='toggle.js'></script>
+<script src='responsive_resolution.js'></script>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
@@ -26,8 +27,12 @@
 	</ul>
 </div>
 
+<script>
+alert(~~($(window).width() / 200 + 1)*200)
+</script>
+
 <div id="main-sidebar" class="sidebar"> 
-	<div id='my_slider' class='swipe' style='width:1000px'>
+	<div id='my_slider' class='swipe' style='width:'.concat((~~($(window).width() / 200 + 1)*200).toString().concat('px'))>
 	  <ul>
 	    <li style='display:block'><div>1</div></li>
 	    <li style='display:none'><div>2</div></li>
@@ -61,7 +66,7 @@
 <script>
 var my_slider = new Swipe(document.getElementById('my_slider'), {
 	speed: 100,
-	items: 5
+	items: ~~($(window).width() / 200 + 1)
 });
 </script>
 
